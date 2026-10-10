@@ -1,1 +1,39 @@
 
+
+import Foundation
+
+// Day 1: Swift Basics
+
+// 1. Print statements
+print("Hello, World!")
+print("I am learning Swift")
+print("My goal is to become an iOS Developer")
+
+// 2. Variables
+var age = 21
+print("My age is \(age)")
+
+age = 22
+print("Updated age is \(age)")
+
+// 3. Constants
+let name = "Mohana"
+print("My name is \(name)")
+
+// 4. Basic data types
+let studentName: String = "Mohana"
+let marks: Int = 90
+let percentage: Double = 85.5
+let isStudent: Bool = true
+
+print(studentName)
+print(marks)
+print(percentage)
+print(isStudent)
+
+// 5. Addition of two numbers
+let firstNumber = 10
+let secondNumber = 20
+let sum = firstNumber + secondNumber
+
+print("Sum is \(sum)")
