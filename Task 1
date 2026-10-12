@@ -1,1 +1,31 @@
 
+
+import Foundation
+
+// 1. Constants
+let studentName = "Mohana"
+let rollNumber: Int = 2301
+
+// 2. Variables and constant
+var semester: Int = 5
+var cgpa: Double = 8.5
+let isHosteller: Bool = true
+
+// 3. Print student details
+print("Name: \(studentName), Roll: \(rollNumber), Semester: \(semester)")
+
+// 4. Update semester and CGPA
+semester += 1
+cgpa = 8.7
+
+print("Name: \(studentName), Roll: \(rollNumber), Semester: \(semester)")
+
+// 5. Try changing the constant
+// studentName = "Bharathi"
+
+// 6. Print data types
+print(type(of: studentName))
+print(type(of: rollNumber))
+print(type(of: semester))
+print(type(of: cgpa))
+print(type(of: isHosteller))
