@@ -1,1 +1,23 @@
 
+var celsius: Double = 25.0
+
+let fahrenheitFactor = 9.0 / 5.0
+let offset = 32.0
+let kelvinOffset = 273.15
+
+var fahrenheit = celsius * fahrenheitFactor + offset
+var kelvin = celsius + kelvinOffset
+
+print("Celsius: \(celsius)")
+print("Fahrenheit: \(String(format: "%.1f", fahrenheit))")
+print("Kelvin: \(String(format: "%.1f", kelvin))")
+
+// Change Celsius
+celsius = 30.0
+
+fahrenheit = celsius * fahrenheitFactor + offset
+kelvin = celsius + kelvinOffset
+
+print("Celsius: \(celsius)")
+print("Fahrenheit: \(String(format: "%.1f", fahrenheit))")
+print("Kelvin: \(String(format: "%.1f", kelvin))")
