@@ -1,1 +1,19 @@
 
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Text("Hello, Mohana!")
+                .font(.title)
+
+            Text("I am learning SwiftUI")
+            
+            Button("Click Me") {
+                print("Button clicked!")
+            }
+        }
+        .padding()
+    }
+}
