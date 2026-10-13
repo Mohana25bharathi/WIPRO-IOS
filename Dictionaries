@@ -1,1 +1,70 @@
 
+
+import Foundation
+
+// Day 7 - Dictionaries in Swift
+
+// 1. Create a dictionary
+var student = [
+    "name": "Mohana",
+    "department": "CSE",
+    "city": "Coimbatore"
+]
+
+print(student)
+
+// 2. Access values using keys
+print(student["name"] ?? "Not found")
+print(student["department"] ?? "Not found")
+
+// 3. Add a new key-value pair
+student["college"] = "ABC College"
+print(student)
+
+// 4. Update an existing value
+student["city"] = "Chennai"
+print(student["city"] ?? "Not found")
+
+// 5. Remove a key-value pair
+student.removeValue(forKey: "college")
+print(student)
+
+// 6. Check the number of elements
+print(student.count)
+
+// 7. Check whether a key exists
+if student["name"] != nil {
+    print("Name exists")
+} else {
+    print("Name not found")
+}
+
+// 8. Loop through the dictionary
+for (key, value) in student {
+    print("\(key): \(value)")
+}
+
+// 9. Dictionary with integer values
+var marks = [
+    "Java": 80,
+    "Swift": 90,
+    "Python": 85
+]
+
+// Update marks
+marks["Java"] = 95
+
+// Add new subject
+marks["SQL"] = 88
+
+print(marks["Java"] ?? 0)
+print(marks["SQL"] ?? 0)
+
+// 10. Calculate total marks
+var total = 0
+
+for mark in marks.values {
+    total += mark
+}
+
+print("Total marks:", total)
