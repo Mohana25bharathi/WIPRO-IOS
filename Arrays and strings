@@ -1,1 +1,117 @@
 
+
+
+
+
+import Foundation
+
+// Day 5 - Arrays in Swift
+
+// 1. Create an array
+var numbers = [10, 20, 30, 40, 50]
+print(numbers)
+
+// 2. Access elements
+print(numbers[0])
+print(numbers[2])
+
+// 3. Add an element
+numbers.append(60)
+print(numbers)
+
+// 4. Remove an element
+numbers.remove(at: 1)
+print(numbers)
+
+// 5. Find array count
+print(numbers.count)
+
+// 6. Print all elements using for loop
+for num in numbers {
+    print(num)
+}
+
+// 7. Find the sum of array elements
+var sum = 0
+
+for num in numbers {
+    sum += num
+}
+
+print("Sum:", sum)
+
+// 8. Find the largest number
+var largest = numbers[0]
+
+for num in numbers {
+    if num > largest {
+        largest = num
+    }
+}
+
+print("Largest:", largest)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import Foundation
+
+// Day 6 - Strings in Swift
+
+// 1. Create strings
+let firstName = "Mohana"
+let lastName = "Bharathi"
+
+// 2. Print strings
+print(firstName)
+print(lastName)
+
+// 3. Combine strings
+let fullName = firstName + " " + lastName
+print(fullName)
+
+// 4. String interpolation
+let age = 21
+print("Name: \(fullName)")
+print("Age: \(age)")
+
+// 5. Find string length
+let language = "Swift"
+print(language.count)
+
+// 6. Uppercase and lowercase
+print(language.uppercased())
+print(language.lowercased())
+
+// 7. Check whether text exists
+print(language.contains("if"))
+print(language.contains("Java"))
+
+// 8. Compare strings
+let word1 = "Swift"
+let word2 = "Swift"
+
+print(word1 == word2)
+
+// 9. Reverse a string
+let text = "Hello"
+let reversedText = String(text.reversed())
+print(reversedText)
