@@ -1,1 +1,19 @@
 
+
+class Car {
+    var brand: String
+    var color: String
+
+    init(brand: String, color: String) {
+        self.brand = brand
+        self.color = color
+    }
+
+    func displayDetails() {
+        print("Brand: \(brand)")
+        print("Color: \(color)")
+    }
+}
+
+let car1 = Car(brand: "BMW", color: "Black")
+car1.displayDetails()
