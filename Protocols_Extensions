@@ -1,1 +1,30 @@
 
+
+protocol StudentDetails {
+    func displayDetails()
+}
+
+struct Student: StudentDetails {
+    var name: String
+    var department: String
+
+    func displayDetails() {
+        print("Name: \(name)")
+        print("Department: \(department)")
+    }
+}
+
+// Extension adds a new function to Student
+extension Student {
+    func greet() {
+        print("Hello, \(name)!")
+    }
+}
+
+let student = Student(
+    name: "Mohana",
+    department: "CSE"
+)
+
+student.displayDetails()
+student.greet()
