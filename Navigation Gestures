@@ -1,1 +1,50 @@
 
+import SwiftUI
+
+struct HomeView: View {
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 20) {
+                Text("Home Screen")
+                    .font(.largeTitle)
+                    .bold()
+
+                NavigationLink(
+                    destination: ProfileView(name: "Student")
+                ) {
+                    Text("Open Profile")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+            }
+            .padding()
+            .navigationTitle("Home")
+        }
+    }
+}
+
+struct ProfileView: View {
+    let name: String
+
+    var body: some View {
+        VStack(spacing: 15) {
+            Image(systemName: "person.circle.fill")
+                .font(.system(size: 80))
+                .foregroundColor(.blue)
+
+            Text("Welcome, \(name)!")
+                .font(.title)
+
+            Text("You are viewing the Profile screen.")
+        }
+        .padding()
+        .navigationTitle("Profile")
+    }
+}
+
+#Preview {
+    HomeView()
+}
+
