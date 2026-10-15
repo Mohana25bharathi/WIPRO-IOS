@@ -1,1 +1,83 @@
 
+import SwiftUI
+
+// Custom View
+struct ProfileCardView: View {
+    let name: String
+    let role: String
+
+    var body: some View {
+        VStack(spacing: 10) {
+            Image(systemName: "person.circle.fill")
+                .resizable()
+                .frame(width: 70, height: 70)
+                .foregroundColor(.blue)
+
+            Text(name)
+                .font(.title2)
+                .bold()
+
+            Text(role)
+                .foregroundColor(.gray)
+        }
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(Color.blue.opacity(0.1))
+        .cornerRadius(15)
+    }
+}
+
+// Home Screen
+struct HomeView: View {
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 20) {
+                Text("Welcome to SwiftUI")
+                    .font(.title)
+                    .bold()
+
+                ProfileCardView(
+                    name: "Student",
+                    role: "iOS Developer"
+                )
+
+                NavigationLink(
+                    destination: DetailView(name: "Student")
+                ) {
+                    Text("View Profile")
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+            }
+            .padding()
+            .navigationTitle("Home")
+        }
+    }
+}
+
+// Detail Screen
+struct DetailView: View {
+    let name: String
+
+    var body: some View {
+        VStack(spacing: 20) {
+            ProfileCardView(
+                name: name,
+                role: "Aspiring iOS Developer"
+            )
+
+            Text("Welcome to your profile page!")
+        }
+        .padding()
+        .navigationTitle("Profile")
+    }
+}
+
+#Preview {
+    HomeView()
+}
+
