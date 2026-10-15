@@ -1,1 +1,86 @@
 
+
+import UIKit
+
+class LoginViewController: UIViewController {
+
+    let titleLabel = UILabel()
+    let emailField = UITextField()
+    let passwordField = UITextField()
+    let loginButton = UIButton(type: .system)
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        view.backgroundColor = .white
+
+        titleLabel.text = "Login"
+        titleLabel.font = .boldSystemFont(ofSize: 30)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        emailField.placeholder = "Enter email"
+        emailField.borderStyle = .roundedRect
+        emailField.translatesAutoresizingMaskIntoConstraints = false
+
+        passwordField.placeholder = "Enter password"
+        passwordField.borderStyle = .roundedRect
+        passwordField.isSecureTextEntry = true
+        passwordField.translatesAutoresizingMaskIntoConstraints = false
+
+        loginButton.setTitle("Login", for: .normal)
+        loginButton.backgroundColor = .systemBlue
+        loginButton.setTitleColor(.white, for: .normal)
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
+
+        view.addSubview(titleLabel)
+        view.addSubview(emailField)
+        view.addSubview(passwordField)
+        view.addSubview(loginButton)
+
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(
+                equalTo: view.centerXAnchor
+            ),
+            titleLabel.topAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.topAnchor,
+                constant: 50
+            ),
+
+            emailField.topAnchor.constraint(
+                equalTo: titleLabel.bottomAnchor,
+                constant: 30
+            ),
+            emailField.leadingAnchor.constraint(
+                equalTo: view.leadingAnchor,
+                constant: 30
+            ),
+            emailField.trailingAnchor.constraint(
+                equalTo: view.trailingAnchor,
+                constant: -30
+            ),
+
+            passwordField.topAnchor.constraint(
+                equalTo: emailField.bottomAnchor,
+                constant: 20
+            ),
+            passwordField.leadingAnchor.constraint(
+                equalTo: emailField.leadingAnchor
+            ),
+            passwordField.trailingAnchor.constraint(
+                equalTo: emailField.trailingAnchor
+            ),
+
+            loginButton.topAnchor.constraint(
+                equalTo: passwordField.bottomAnchor,
+                constant: 25
+            ),
+            loginButton.leadingAnchor.constraint(
+                equalTo: emailField.leadingAnchor
+            ),
+            loginButton.trailingAnchor.constraint(
+                equalTo: emailField.trailingAnchor
+            ),
+            loginButton.heightAnchor.constraint(equalToConstant: 45)
+        ])
+    }
+}
