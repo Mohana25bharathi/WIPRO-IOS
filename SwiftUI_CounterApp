@@ -1,1 +1,44 @@
 
+import SwiftUI
+
+struct ContentView: View {
+    @State private var count = 0
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("Counter App")
+                .font(.largeTitle)
+                .bold()
+
+            Text("Count: \(count)")
+                .font(.title)
+
+            HStack(spacing: 20) {
+                Button("Increase") {
+                    count += 1
+                }
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+
+                Button("Decrease") {
+                    count -= 1
+                }
+                .padding()
+                .background(Color.red)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+            }
+
+            Button("Reset") {
+                count = 0
+            }
+        }
+        .padding()
+    }
+}
+
+#Preview {
+    ContentView()
+}
