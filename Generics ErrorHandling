@@ -1,1 +1,35 @@
 
+
+import Foundation
+
+// MARK: - Generics
+
+func displayValue<T>(_ value: T) {
+    print("Value: \(value)")
+}
+
+displayValue(100)
+displayValue("Mohana")
+
+// MARK: - Error Handling
+
+enum AgeError: Error {
+    case invalidAge
+}
+
+func checkAge(_ age: Int) throws -> String {
+    if age < 0 {
+        throw AgeError.invalidAge
+    }
+
+    return "Age: \(age)"
+}
+
+do {
+    let result = try checkAge(21)
+    print(result)
+} catch AgeError.invalidAge {
+    print("Error: Age cannot be negative")
+} catch {
+    print("Something went wrong")
+}
