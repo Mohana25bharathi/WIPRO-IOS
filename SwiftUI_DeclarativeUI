@@ -1,0 +1,47 @@
+import SwiftUI
+
+@main
+struct MyProfileApp: App {
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
+
+struct ContentView: View {
+
+    @State private var showMessage = false
+
+    var body: some View {
+        VStack(spacing: 20) {
+
+            Image(systemName: "person.circle.fill")
+                .resizable()
+                .frame(width: 100, height: 100)
+                .foregroundColor(.blue)
+
+            Text("My Profile")
+                .font(.largeTitle)
+                .bold()
+
+            Text("Aspiring iOS Developer")
+                .font(.headline)
+
+            Button("Say Hello") {
+                showMessage.toggle()
+            }
+
+            if showMessage {
+                Text("Welcome to SwiftUI!")
+                    .foregroundColor(.green)
+            }
+        }
+        .padding()
+    }
+}
+
+#Preview {
+    ContentView()
+}
