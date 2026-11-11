@@ -1,1 +1,57 @@
 
+import SwiftUI
+
+// MARK: - Model
+struct Student {
+    let name: String
+    let department: String
+    let college: String
+}
+
+// MARK: - Main App
+@main
+struct XcodeConfigurationDemoApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
+
+// MARK: - View
+struct ContentView: View {
+
+    let student = Student(
+        name: "Mohana",
+        department: "Computer Science",
+        college: "Karpagam Institute of Technology"
+    )
+
+    var body: some View {
+        VStack(spacing: 20) {
+
+            Text("Xcode Configuration Demo")
+                .font(.title)
+                .bold()
+
+            Text("Student Details")
+                .font(.headline)
+
+            Text("Name: \(student.name)")
+            Text("Department: \(student.department)")
+            Text("College: \(student.college)")
+
+            Divider()
+
+            Text("Project: XcodeConfigurationDemo")
+            Text("Target: Main Application")
+            Text("Scheme: XcodeConfigurationDemo")
+            Text("Build Configuration: Debug")
+
+            Text("Welcome to SwiftUI!")
+                .foregroundColor(.blue)
+        }
+        .padding()
+    }
+}
+
