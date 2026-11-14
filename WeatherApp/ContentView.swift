@@ -1,1 +1,90 @@
 
+import SwiftUI
+
+struct ContentView: View {
+
+    var body: some View {
+
+        ZStack {
+
+            // Background Color
+            LinearGradient(
+                colors: [.blue, .cyan],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
+
+            VStack(spacing: 25) {
+
+                // App Heading
+                Text("Weather App")
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(.white)
+
+                // City Name
+                Text("Coimbatore")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.yellow)
+
+                // Weather Icon
+                Image(systemName: "sun.max.fill")
+                    .font(.system(size: 85))
+                    .foregroundColor(.yellow)
+
+                // Temperature
+                Text("32°C")
+                    .font(.system(size: 60))
+                    .bold()
+                    .foregroundColor(.white)
+
+                // Weather Condition
+                Text("Sunny")
+                    .font(.title2)
+                    .foregroundColor(.orange)
+
+                // Weather Details
+                HStack(spacing: 40) {
+
+                    VStack(spacing: 10) {
+
+                        Image(systemName: "humidity.fill")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+
+                        Text("Humidity")
+                            .foregroundColor(.white)
+
+                        Text("65%")
+                            .bold()
+                            .foregroundColor(.yellow)
+                    }
+
+                    VStack(spacing: 10) {
+
+                        Image(systemName: "wind")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+
+                        Text("Wind")
+                            .foregroundColor(.white)
+
+                        Text("12 km/h")
+                            .bold()
+                            .foregroundColor(.yellow)
+                    }
+                }
+                .padding(25)
+                .frame(maxWidth: .infinity)
+                .background(Color.white.opacity(0.2))
+                .cornerRadius(20)
+
+                Spacer()
+            }
+            .padding(25)
+            .frame(maxWidth: .infinity)
+        }
+    }
+}
