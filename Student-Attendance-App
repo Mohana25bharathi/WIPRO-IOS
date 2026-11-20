@@ -1,1 +1,49 @@
 
+
+import Foundation
+
+struct Student {
+
+    var name: String
+    var rollNumber: String
+    var department: String
+    var year: Int
+
+}
+
+var students: [Student] = []
+
+// Register student 1
+let student1 = Student(
+    name: "Mohana",
+    rollNumber: "23CS001",
+    department: "CSE",
+    year: 3
+)
+
+// Register student 2
+let student2 = Student(
+    name: "Arun",
+    rollNumber: "23CS002",
+    department: "IT",
+    year: 3
+)
+
+// Add students to array
+students.append(student1)
+students.append(student2)
+
+// Display student details
+print("===== STUDENT DETAILS =====")
+
+for student in students {
+
+    print("Name: \(student.name)")
+    print("Roll Number: \(student.rollNumber)")
+    print("Department: \(student.department)")
+    print("Year: \(student.year)")
+
+    print("----------------------")
+}
+
+print("Total Students: \(students.count)")
